@@ -1,0 +1,47 @@
+{
+	"brandTitle": "Portfolio",
+	"brandLogo": "http://via.placeholder.com/150x150?text=LOGO",
+  "brandColor": "red",
+
+  "meta": {
+    "description": "meta description",
+    "keywords": "meta keywords",
+    "author": "Rafał Kozłowski"
+  },
+
+	"sections": {
+		"header": {
+			"title": "title",
+			"subtitle": "subtitle",
+			"description": "description"
+		}
+	},
+
+  "placeholders": {
+		"img": {
+			"icon": {
+				"32": "http://via.placeholder.com/34x34?text=iconx32",
+				"48": "http://via.placeholder.com/48x48?text=iconx48",
+				"64": "http://via.placeholder.com/64x64?text=iconx64",
+				"128": "http://via.placeholder.com/128x128?text=iconx128"
+			},
+			"images": {
+				"horizontal": {
+					"standard": "http://via.placeholder.com/550x300",
+					"hd": "http://via.placeholder.com/1920x1080"
+				},
+				"vertical": {
+					"standard": "http://via.placeholder.com/260x450",
+					"hd": "http://via.placeholder.com/1080x1920"
+				}
+			}
+		}
+	},
+
+	"cards": {
+		"date": "",
+		"author": "",
+		"title": "this title will try to cover 3 lines of text but if it faill then i ddunno what i will do",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+	}
+}

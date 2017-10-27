@@ -1,0 +1,51 @@
+footer.footer
+  //- .section-deco-holder
+  .section-deco
+  .container
+    .row
+      .col-sm-6.col-sm-push-3
+        .section-header.text-center
+          h2 Contact
+        form.well.contact-form
+          .row
+            .col-sm-6
+              .form-group.md-input
+                label(for='inputName') imię i nazwisko
+                input#inputName.form-control(type='text')
+                span
+            .col-sm-6
+              .form-group.md-input
+                label(for='exampleInputEmail') e-mail
+                input#exampleInputEmail.form-control(type='email')
+                span
+            .col-sm-12
+              .form-group.md-input
+                label(for='inputPhone') numer telefonu
+                input#inputPhone.form-control(type='number')
+                span
+            .col-sm-12
+              .form-group.md-input
+                label(for="inputTextarea") wiadomość
+                textarea#inputTextarea.form-control(rows="3")
+                span
+            .col-sm-12
+              .checkbox.checkbox-custom
+                label
+                  input(type='checkbox')
+                  |  Prywatność przetwarzanie danych osobowych Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .col-sm-6.col-sm-offset-6
+              button.btn.btn-primary.btn-lg.btn-block(type='submit') Wyślij
+    .row
+      .col-sm-6.col-sm-push-3.text-center.c-white
+        | or
+        .contact-data
+          a.mail(href="mailto: rim.kozlowski@gmail.com", target="_blank") rim.kozlowski@gmail.com
+          a.phone(href="tel: +48792561292", target="_blank") 792561292
+    .row
+      .col-sm-6.col-sm-push-3.text-center
+        ul.list-inline.social-icons
+          li: a(href="#", target="_blank"): i.fa.fa-behance
+          li: a(href="#", target="_blank"): i.fa.fa-dribbble
+          li: a(href="#", target="_blank"): i.fa.fa-facebook-square
+          li: a(href="#", target="_blank"): i.fa.fa-linkedin-square
+          

@@ -1,0 +1,40 @@
+extends ../templates/base
+block extra_css
+
+block content
+  section.header
+    .section-deco
+    .container
+      .row
+        .col-sm-6.col-sm-push-3
+          .section-header
+            h1 Rafał Kozłowski
+            p Projektant
+  //- section
+    include ../includes/components/loader_spinner.pug
+  section.me
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .me-img
+            img.img-responsive(src="http://via.placeholder.com/500x800", alt="")
+          .me-text
+            .me-text-header.section-header
+              h1 Trochę o mnie
+              p hehe
+            .me-text-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores, odio, rerum rem repudiandae assumenda enim nisi atque, magnam, sed ex. Distinctio ullam dolore, animi dicta dolores consequuntur, commodi quaerat?
+            .me-text-footer
+  section.portfolio.inner-section
+    .container
+      .row
+        .col-sm-6.col-sm-push-3.text-center
+          .section-header
+            h2 title
+      .row
+        include index/index-portfolio-card
+      .row
+        include index/index-portfolio-card-reversed
+      .row
+        include index/index-portfolio-card
+block extra_js

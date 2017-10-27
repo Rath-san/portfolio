@@ -1,0 +1,37 @@
+.sidebar
+  z-index: 1033
+  position: fixed
+  top: 0
+  right: 0
+  min-height: 100vh
+  background-color: $brand-primary
+  transform: translateX(110%)
+  transition: transform 300ms $material-bezier
+  width: 30rem
+  // padding: 2rem
+  i
+    color: $white
+  .navbar-nav
+    width: 100%
+    >li
+      display: block
+      float: none
+      >a
+        color: $white
+      >a
+        padding: 2rem 4rem
+
+
+
+
+
+  &.is--open
+    transform: translateX(0)
+
+.nav
+  >li
+    >a
+      &:hover,
+      &:focus
+        color: $brand-primary
+        background-color: $brand-cta
