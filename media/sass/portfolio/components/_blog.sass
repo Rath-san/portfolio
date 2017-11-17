@@ -1,0 +1,30 @@
+
+.blog-card
+  position: relative
+  &-img
+    width: 100%
+    &-wrapper
+
+  &-text
+    // text-align: left
+    // position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    &.text
+      &-left
+        position: absolute
+        left: -25%
+      &-center
+        position: relative
+      &-right
+        position: absolute
+        right: -25%
+    &-heading
+      font-size: 1.8rem
+      color: $brand-cta
+      font-weight: 600
+    &-description
+      p
+        font-size: 1.2rem
+        line-height: 1.5
+        // line-height: 28px

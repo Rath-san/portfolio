@@ -1,10 +1,11 @@
-$cube-side: 20px
+$cube-side: 50px
 
 .spinner-wrapper
+  transform-style: (preserve-3d)
 .cube-spinner
   position: absolute
   left: 50%
-  perspective: 4000px
+  perspective: 1000px
   perspective-origin: center
   transform: rotateY(45deg) rotateZ(-15deg) rotateX(-15deg)
   transform-style: (preserve-3d)
@@ -26,15 +27,19 @@ $cube-side: 20px
       display: block
       width: $cube-side
       height: $cube-side
+      transform-style: (preserve-3d)
     .c1a
-      background-color: red
+      background-color: darken(white, 5%)
       transform: translateZ( $cube-side/2)
+      // border: 1px solid darken(white, 5%)
     .c1b
-      background-color: darken(red, 10%)
+      background-color: darken(white, 10%)
       transform: translateX($cube-side/-2) rotateY(90deg)
+      // border: 1px solid darken(white, 10%)
     .c1c
-      background-color: lighten(red, 10%)
+      background-color: white
       transform: translateY($cube-side/-2) rotateX(90deg)
+      // border: 1px solid white
     .c1d
       background-color: teal
       transform: translateZ( $cube-side/-2)
@@ -74,16 +79,16 @@ $cube-side: 20px
   100%
     transform: translateY($cube-side)
 
-.anim-slide-1
+// .anim-slide-1
     animation-duration: 1s
     animation-name: c--oneSlide
     animation-iteration-count: infinite
-.anim-slide-2
+// .anim-slide-2
     animation-duration: 1s
     animation-name: c--twoSlide
     animation-iteration-count: infinite
 
-.anim
+// .anim
   // animation: loading
   animation-duration: 1s
   animation-name: loading

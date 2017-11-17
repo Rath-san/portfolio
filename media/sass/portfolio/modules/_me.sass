@@ -1,10 +1,14 @@
 .me
 
 .me-img
+  z-index: 0
   display: inline-block
   width: 40%
   vertical-align: middle
   padding: 1rem
+  position: relative
+  img
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%)
   // +shadow-z-4($brand-primary)
 
 .me-text
@@ -14,11 +18,14 @@
   margin-left: -30px
   vertical-align: middle
   background-color: $white
+  position: relative
+  z-index: 1
   +shadow-z-5($brand-primary)
   &-header
-    h1
+    h2
       margin-top: 0
       color: $brand-cta
+      // font-weight: 600
     p
       margin-bottom: 0
   &-body

@@ -38,7 +38,7 @@ button
     right: 0
     transform: translateY(100%)
     transition: all 0.3s $material-bezier 0.3s
-  &:hover
+  .is--active &
     &::before, &::after
       opacity: 1
       transform: translateY(0)
@@ -86,7 +86,7 @@ button
     height: 100%
     transition: (all 250ms ease)
     transform-style: (preserve-3d)
-    &:hover
+    .is--active &
       transform: rotate3d(-0.4, 0.5, -0.1, 45deg)
 
 .default-state
@@ -120,7 +120,7 @@ button
 
 .btn-primary
   background-color: $brand-cta
-  &:hover
+  .is--active &
     // background-color: transparent
     background-color: lighten($brand-cta, 10%)
     color: $brand-primary

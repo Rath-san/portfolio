@@ -7,24 +7,12 @@ block content
     .container
       .row
         .col-sm-6.col-sm-push-3
-          .section-header
+          .section-header-main
             h1 Rafał Kozłowski
             p Projektant
   //- section
     include ../includes/components/loader_spinner.pug
-  section.me
-    .container
-      .row
-        .col-sm-8.col-sm-offset-2
-          .me-img
-            img.img-responsive(src="http://via.placeholder.com/500x800", alt="")
-          .me-text
-            .me-text-header.section-header
-              h1 Trochę o mnie
-              p hehe
-            .me-text-body
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores, odio, rerum rem repudiandae assumenda enim nisi atque, magnam, sed ex. Distinctio ullam dolore, animi dicta dolores consequuntur, commodi quaerat?
-            .me-text-footer
+  include index/me
   section.portfolio.inner-section
     .container
       .row
@@ -32,9 +20,28 @@ block content
           .section-header
             h2 title
       .row
+        - var cType = "2d"
         include index/index-portfolio-card
       .row
+        - var cType = "3d"
         include index/index-portfolio-card-reversed
       .row
+        - var cType = "web"
         include index/index-portfolio-card
+  section.blog
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          .row
+            .col-sm-4
+              - var bType = "left"
+              include index/index-blog
+            .col-sm-4
+              - var bType = "center"
+              include index/index-blog
+              include index/index-blog
+            .col-sm-4
+              - var bType = "right"
+              include index/index-blog
+          
 block extra_js

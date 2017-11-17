@@ -21,6 +21,7 @@ mdInput.on('focusout', function(){
 
 // .card-holder
 
+
 function isSeen(item) {
   // console.log($(item).length);
   var wH = $(window).height();
@@ -32,8 +33,10 @@ function isSeen(item) {
 //
     if ((wST + wH/2 > elem.offset().top) && (elem.offset().top + elem.height()) > (wST + wH/2)) {
       $(item).eq(i).addClass('is--active')
+      // return true
     } else {
       $(item).eq(i).removeClass('is--active')
+      // return false
     }
   }
   var wH = $(window).height();
@@ -53,6 +56,19 @@ function isSeen(item) {
 $(document).ready(function(){
   console.log('hello, portfolio!');
 
+  var wW = $(window).width()
+  // console.log(wW);
+
+  if (wW < 768) {
+    $(window).on('scroll', function(){
+      isSeen('.card')
+    });
+  } else {
+    $('.card').hover(function(){
+      $(this).toggleClass('is--active')
+    })
+  }
+
   //footer jumping i no content
   if($('body').height() > $(window).height()) {
     $('.footer').removeClass('is--fixed')
@@ -62,10 +78,4 @@ $(document).ready(function(){
 
   toggleSidebar('.sidebar-toggle')
   // equalHeight()
-  isSeen('.card')
-
 })
-
-$(window).on('scroll', function(){
-  isSeen('.card')
-});
