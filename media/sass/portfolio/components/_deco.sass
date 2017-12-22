@@ -1,21 +1,21 @@
 .section-deco
   position: absolute
-  width: 100%
-  height: 100%
   top: 0
   left: 0
   transform-origin: center top
-  // background-color: $brand-primary
-  background-image: $brand-gradient
-  transform: rotateZ(-10deg) scale(1.5, 6)
+  height: 100%
+  width: 100%
   +shadow-z-1(black)
 
-  .header &
-    top: 50%
-    // left: 0
-    height: 100%
-    transform: rotateZ(-10deg) scale(1.5, 3) translateY(-50%)
+  &-header
+    top: 0
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%)
+    .project-detail-page &
+      clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%)
 
-  .footer &
-    top: 20%
-    transform: rotateZ(10deg) scale(1.5, 2)
+  &-footer
+    // top: 20%
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%)
+
+  &.bg-gradient
+    background-image: $brand-gradient

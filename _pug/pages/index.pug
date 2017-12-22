@@ -2,8 +2,8 @@ extends ../templates/base
 block extra_css
 
 block content
-  section.header
-    .section-deco
+  header.header
+    .section-deco.section-deco-header.bg-gradient
     .container
       .row
         .col-sm-6.col-sm-push-3
@@ -31,16 +31,19 @@ block content
   section.blog
     .container
       .row
-        .col-sm-10.col-sm-offset-1
-          .row
-            .col-sm-4
+        .col-sm-6.col-sm-push-3.text-center
+          .section-header
+            h2 blog
+        .col-sm-9.col-sm-offset-2
+          .row.equal-row
+            .col-sm-3.col-sm-offset-1
               - var bType = "left"
               include index/index-blog
-            .col-sm-4
+            .col-sm-3
               - var bType = "center"
               include index/index-blog
               include index/index-blog
-            .col-sm-4
+            .col-sm-3
               - var bType = "right"
               include index/index-blog
           

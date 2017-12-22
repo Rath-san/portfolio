@@ -1,6 +1,8 @@
 // sidebar toggle
 function toggleSidebar(item) {
-  $(item).on('click', function() {
+  var toggler = $(item)
+  toggler.on('click', function() {
+    toggler.toggleClass('is--open')
     $('.sidebar').toggleClass('is--open')
   })
 }
@@ -41,17 +43,17 @@ function isSeen(item) {
   }
   var wH = $(window).height();
 }
+//equal columns
+function equalColumns() {
+  var container = $('.equal-row')
+  var containerHeight = container.height()
+  var columns = container.children()
 
-// columns w equal heights
-// function equalHeight(){
-//   var row = $('.equal-cols');
-//   var cols = $('.equal-cols > div[class*="col"]');
-//   var rowHeight = row.height()
-//   // var heights = []
-//   for (var i = 0; i < cols.length; i++) {
-//     cols.eq(i).css("height", rowHeight)
-//   }
-// }
+  for (var c = 0; c < columns.length; c++) {
+    columns.eq(c).css('height', containerHeight)
+    console.log(columns[c]);
+  }
+}
 
 $(document).ready(function(){
   console.log('hello, portfolio!');
@@ -64,10 +66,12 @@ $(document).ready(function(){
       isSeen('.card')
     });
   } else {
+    equalColumns();
     $('.card').hover(function(){
       $(this).toggleClass('is--active')
     })
   }
+
 
   //footer jumping i no content
   if($('body').height() > $(window).height()) {
@@ -78,4 +82,27 @@ $(document).ready(function(){
 
   toggleSidebar('.sidebar-toggle')
   // equalHeight()
+
+  // owl-carousel
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    items: 1,
+    nav:true,
+    navText: [
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.56 38.29"><polyline points="0.71 0.71 19.14 19.14 0.71 37.58" fill=none stroke-miterlimit="10" stroke-width="2"/></svg>', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.56 38.29"><polyline points="0.71 0.71 19.14 19.14 0.71 37.58" fill=none stroke-miterlimit="10" stroke-width="2"/></svg>'
+    ],
+    dots: true
+    // margin:10,
+    // responsive:{
+    //     0:{
+    //         items:1
+    //     },
+    //     600:{
+    //         items:3
+    //     },
+    //     1000:{
+    //         items:5
+    //     }
+    // }
+})
 })

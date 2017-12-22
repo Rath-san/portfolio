@@ -2,31 +2,25 @@
 nav.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
-      a.navbar-brand(href='#'): img(src=brandLogo) 
+      a.navbar-brand(href='/'): img(src=brandLogo) 
       button.sidebar-toggle.sidebar-toggle-button.pull-right
-        i.fa.fa-navicon
+        span.sidebar-toggle-item
+        span.sidebar-toggle-item
+        span.sidebar-toggle-item
 
 
-.sidebar.is--open
-  .sidebar-toggle.text-right
-    button.p-2
-      i.fa.fa-close
+.sidebar
+  .text-right.clearfix
+    button.sidebar-toggle.sidebar-toggle-button.pull-right
+      span.sidebar-toggle-item
+      span.sidebar-toggle-item
+      span.sidebar-toggle-item
   nav
     ul.nav.navbar-nav
       li: a(href="#") me
       li: a(href="#") my work
       //- li: a(href="#") clients
       li: a(href="#") contact
-
-
-
-
-
-
-
-
-
-
 
   //- #navbar
     ul.nav.navbar-nav

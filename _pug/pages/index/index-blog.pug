@@ -1,10 +1,10 @@
-
-
-.blog-card.debug-border
+div(class="blog-card blog-card-"+bType)
   .blog-card-img-wrapper
-    img(src=placeholders.img.images.vertical.standard, alt="1").blog-card-img
-  div(class="blog-card-text .text-"+bType)
+    img(src=placeholders.img.images.vertical.standard, alt="1", height="300px").blog-card-img
+  div(class="blog-card-text text-"+bType)
     .blog-card-text-heading
       h3 lorem
     .blog-card-text-description
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, blanditiis, reprehenderit! Recusandae itaque eaque quaerat molestias dignissimos, qui quia! Fugit, eum. Non sint cumque necessitatibus id soluta quasi voluptatum tempora.
+    .blog-card-footer
+      a.btn.btn-secondary(href="#", target="_blank") read more

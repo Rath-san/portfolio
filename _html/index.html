@@ -25,14 +25,14 @@
     <!-- Fixed navbar-->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header"><a class="navbar-brand" href="#"><img src="http://via.placeholder.com/150x150?text=LOGO"></a>
-          <button class="sidebar-toggle sidebar-toggle-button pull-right"><i class="fa fa-navicon"></i></button>
+        <div class="navbar-header"><a class="navbar-brand" href="/"><img src="http://via.placeholder.com/150x150?text=LOGO"></a>
+          <button class="sidebar-toggle sidebar-toggle-button pull-right"><span class="sidebar-toggle-item"></span><span class="sidebar-toggle-item"></span><span class="sidebar-toggle-item"></span></button>
         </div>
       </div>
     </nav>
-    <div class="sidebar is--open">
-      <div class="sidebar-toggle text-right">
-        <button class="p-2"><i class="fa fa-close"></i></button>
+    <div class="sidebar">
+      <div class="text-right clearfix">
+        <button class="sidebar-toggle sidebar-toggle-button pull-right"><span class="sidebar-toggle-item"></span><span class="sidebar-toggle-item"></span><span class="sidebar-toggle-item"></span></button>
       </div>
       <nav>
         <ul class="nav navbar-nav">
@@ -42,8 +42,8 @@
         </ul>
       </nav>
     </div>
-    <section class="header">
-      <div class="section-deco"></div>
+    <header class="header">
+      <div class="section-deco section-deco-header bg-gradient"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-sm-push-3">
@@ -54,8 +54,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="me">
+    </header>
+    <section class="me inner-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
@@ -93,10 +93,10 @@
                   </div>
                   <div class="card-description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellendus quam possimus natus ducimus, nostrum dolore illo cupiditate aperiam hic praesentium pariatur earum repudiandae libero suscipit officiis, tempore similique! Quod!</p>
-                  </div><a class="btn btn-2d" href="#">check it out<span></span></a>
+                  </div><a class="btn btn-2d" href="/project_detail.html">check it out<span></span></a>
                 </div>
               </div>
-              <div class="card-img-holder"><a href="#"><img class="card-img" src="http://via.placeholder.com/550x300" alt=""></a></div>
+              <div class="card-img-holder"><a href="/project_detail.html"><img class="card-img" src="http://via.placeholder.com/550x300" alt=""></a></div>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
                   </div>
                   <div class="card-description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellendus quam possimus natus ducimus, nostrum dolore illo cupiditate aperiam hic praesentium pariatur earum repudiandae libero suscipit officiis, tempore similique! Quod!</p>
-                  </div><a class="btn btn-3d" href="#">check it out
+                  </div><a class="btn btn-3d" href="/project_detail.html">check it out
                     <div class="cube">
                       <div class="default-state">check it out</div>
                       <div class="active-state"></div>
@@ -132,10 +132,10 @@
                   </div>
                   <div class="card-description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellendus quam possimus natus ducimus, nostrum dolore illo cupiditate aperiam hic praesentium pariatur earum repudiandae libero suscipit officiis, tempore similique! Quod!</p>
-                  </div><a class="btn btn-primary" href="#">check it out</a>
+                  </div><a class="btn btn-primary" href="/project_detail.html">check it out</a>
                 </div>
               </div>
-              <div class="card-img-holder"><a href="#"><img class="card-img" src="http://via.placeholder.com/550x300" alt=""></a></div>
+              <div class="card-img-holder"><a href="/project_detail.html"><img class="card-img" src="http://via.placeholder.com/550x300" alt=""></a></div>
             </div>
           </div>
         </div>
@@ -144,55 +144,64 @@
     <section class="blog">
       <div class="container">
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="blog-card debug-border">
-                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1"></div>
-                  <div class="blog-card-text .text-left">
+          <div class="col-sm-6 col-sm-push-3 text-center">
+            <div class="section-header">
+              <h2>blog</h2>
+            </div>
+          </div>
+          <div class="col-sm-9 col-sm-offset-2">
+            <div class="row equal-row">
+              <div class="col-sm-3 col-sm-offset-1">
+                <div class="blog-card blog-card-left">
+                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1" height="300px"></div>
+                  <div class="blog-card-text text-left">
                     <div class="blog-card-text-heading">
                       <h3>lorem</h3>
                     </div>
                     <div class="blog-card-text-description">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, blanditiis, reprehenderit! Recusandae itaque eaque quaerat molestias dignissimos, qui quia! Fugit, eum. Non sint cumque necessitatibus id soluta quasi voluptatum tempora.</p>
                     </div>
+                    <div class="blog-card-footer"><a class="btn btn-secondary" href="#" target="_blank">read more</a></div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="blog-card debug-border">
-                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1"></div>
-                  <div class="blog-card-text .text-center">
+              <div class="col-sm-3">
+                <div class="blog-card blog-card-center">
+                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1" height="300px"></div>
+                  <div class="blog-card-text text-center">
                     <div class="blog-card-text-heading">
                       <h3>lorem</h3>
                     </div>
                     <div class="blog-card-text-description">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, blanditiis, reprehenderit! Recusandae itaque eaque quaerat molestias dignissimos, qui quia! Fugit, eum. Non sint cumque necessitatibus id soluta quasi voluptatum tempora.</p>
                     </div>
+                    <div class="blog-card-footer"><a class="btn btn-secondary" href="#" target="_blank">read more</a></div>
                   </div>
                 </div>
-                <div class="blog-card debug-border">
-                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1"></div>
-                  <div class="blog-card-text .text-center">
+                <div class="blog-card blog-card-center">
+                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1" height="300px"></div>
+                  <div class="blog-card-text text-center">
                     <div class="blog-card-text-heading">
                       <h3>lorem</h3>
                     </div>
                     <div class="blog-card-text-description">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, blanditiis, reprehenderit! Recusandae itaque eaque quaerat molestias dignissimos, qui quia! Fugit, eum. Non sint cumque necessitatibus id soluta quasi voluptatum tempora.</p>
                     </div>
+                    <div class="blog-card-footer"><a class="btn btn-secondary" href="#" target="_blank">read more</a></div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="blog-card debug-border">
-                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1"></div>
-                  <div class="blog-card-text .text-right">
+              <div class="col-sm-3">
+                <div class="blog-card blog-card-right">
+                  <div class="blog-card-img-wrapper"><img class="blog-card-img" src="http://via.placeholder.com/260x450" alt="1" height="300px"></div>
+                  <div class="blog-card-text text-right">
                     <div class="blog-card-text-heading">
                       <h3>lorem</h3>
                     </div>
                     <div class="blog-card-text-description">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, blanditiis, reprehenderit! Recusandae itaque eaque quaerat molestias dignissimos, qui quia! Fugit, eum. Non sint cumque necessitatibus id soluta quasi voluptatum tempora.</p>
                     </div>
+                    <div class="blog-card-footer"><a class="btn btn-secondary" href="#" target="_blank">read more</a></div>
                   </div>
                 </div>
               </div>
@@ -202,7 +211,7 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="section-deco"></div>
+      <div class="section-deco section-deco-footer bg-gradient"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-sm-push-3">

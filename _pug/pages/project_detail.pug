@@ -1,0 +1,122 @@
+extends ../templates/base
+block extra_css
+  style(type='text/css').
+    .detail-bg-img {
+        background-image: linear-gradient( 70deg, #151c3e 0%, #2f408a 100%), url("https://i.imgur.com/Cj0CEmI.jpg");
+        background-size: cover;
+        background-position: 50% 55%;
+        background-blend-mode: hard-light;
+    }
+block extra_var
+  - var bodyClass = 'project-detail-page'
+block content
+  header.header
+    .section-deco.section-deco-header.detail-bg-img
+    .container
+      .row
+        .col-sm-10.col-sm-push-1
+          .section-header-main
+            h1 Projekt postaci "GOBeLIN"
+            p Lorem ipsum dolor sit amet.
+
+  section.inner-section
+    .container
+      .row
+        .col-sm-3.col-sm-offset-1
+          h2.sb-title What is it?
+        .col-sm-7
+          .project-plain-description
+            p.project-plain-paragraph
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam assumenda, eos nobis ad quam mollitia. Explicabo eaque, labore! Sunt quisquam maxime illo quasi maiores dolor hic, temporibus doloremque nisi!
+  section.sb-bustout.inner-section
+    .container-fluid
+      .row
+        .col-sm-6
+          .sb-bustout-img-wrapper
+            img.sb-bustout-img(src="", alt="bustout")
+        .col-sm-6.container-half
+          .row
+            .col-sm-10
+              .sb-bustout-text
+                  h2.sb-title.sb-bustout-title o projektcie
+                  p.sb-bustout-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fuga nobis culpa, odio repellendus similique eveniet adipisci voluptatum vitae consectetur, deleniti quidem voluptate ut explicabo alias quo dignissimos quas dolores, laboriosam dolorem? Magnam nulla, delectus deserunt voluptatibus! Eum consequuntur neque illo nostrum, quos dolor, magnam provident, necessitatibus architecto debitis modi.
+  section.inner-section
+    .container
+      .row
+        .col-sm-3.col-sm-offset-1
+          .project-plain-header
+            h2.sb-title.project-description-title What is it?
+        .col-sm-7
+          .project-plain-description
+            p.project-plain-paragraph
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit totam assumenda, eos nobis ad quam mollitia. Explicabo eaque, labore! Sunt quisquam maxime illo quasi maiores dolor hic, temporibus doloremque nisi!
+  section.inner-section
+    .container
+      .row
+        .col-sm-12
+          .sb-gallery
+            img(class="gallery-item" src="http://via.placeholder.com/1920x1080", alt="img")
+            img(class="gallery-item" src="http://via.placeholder.com/1920x1080", alt="img")
+            img(class="gallery-item" src="http://via.placeholder.com/1920x1080", alt="img")
+            img(class="gallery-item" src="http://via.placeholder.com/1920x1080", alt="img")
+            img(class="gallery-item-big" src="http://via.placeholder.com/1920x1080", alt="img")
+
+  section.sb-carousel.inner-section
+    .owl-carousel.owl-theme.owl-sb-carousel
+      .item
+        img(class="img-responsive", src="http://via.placeholder.com/1920x1080", alt="img")
+      .item
+        img(class="img-responsive", src="http://via.placeholder.com/1920x1080", alt="img")
+
+  section.sb-3d.inner-section
+    .container
+      .row
+        .col-sm-12
+          .sb-3d-wrapper
+            .responsive-obj(style="padding-bottom: 56.25%;")
+              iframe(src="", class="api-frame" id="apiFrame", allowfullscreen mozallowfullscreen="true", webkitallowfullscreen="true")
+  
+  section.sb-cretits.inner-section
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .credits
+            .credits-header
+              h2.sb-title.credits-title Credits
+            .credits-body
+              p.credits-body-paragraph
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolor unde enim porro corporis, recusandae modi magnam molestias in culpa ut veritatis impedit, repudiandae error possimus, nihil consequatur ex quae.
+
+          
+block extra_js
+  script(src="media/plugins/OwlCarousel2-2.2.1/dist/owl.carousel.min.js")
+  <!-- Insert this script -->
+  script(type="text/javascript", src="https://static.sketchfab.com/api/sketchfab-viewer-1.0.0.js")
+  <!-- Initialize the viewer -->
+  script( type="text/javascript").
+    var iframe = document.getElementById( 'apiFrame' );
+    var urlid = 'e9e66978d4a248e2b0c4fdbb9912a573';
+
+    // By default, the latest version of the viewer API will be used.
+    //- var client = new Sketchfab( iframe );
+
+    // Alternatively, you can request a specific version.
+    var client = new Sketchfab( '1.0.0', iframe );
+
+    client.init( urlid, {
+        success: function onSuccess( api ){
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+
+                // API is ready to use
+                // Insert your code here
+                console.log( 'Viewer is ready' );
+
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        }
+    } );
+    

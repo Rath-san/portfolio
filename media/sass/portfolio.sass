@@ -23,12 +23,14 @@ $font-awesome: "font-awesome"
 @import portfolio/components/_buttons
 @import portfolio/components/_headings
 @import portfolio/components/_inputs
+@import portfolio/components/_burger
 @import portfolio/components/_dropdowns
 @import portfolio/components/_deco
 @import portfolio/components/_blog
 @import portfolio/components/_wells
 @import portfolio/components/_checkboxes
 @import portfolio/components/_cards
+@import portfolio/components/_scrollbar
 
 @import portfolio/modules/_navbar
 @import portfolio/modules/_footer
@@ -39,9 +41,17 @@ $font-awesome: "font-awesome"
 
 // @import portfolio/plugins/
 @import portfolio/plugins/_loader-spinner
+@import portfolio/plugins/_owl-carousel
+
+@import portfolio/stream-block/_bustout
+@import portfolio/stream-block/_gallery
+@import portfolio/stream-block/_carousel
+@import portfolio/stream-block/_typography
+@import portfolio/stream-block/_3d
 
 html
   font-size: 62.5%
+  overflow-x: hidden
 
 body
   width: 100%

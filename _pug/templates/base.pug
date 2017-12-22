@@ -29,7 +29,8 @@ html(lang="pl")
 
     block extra_css
     link(href="media/css/portfolio.css", rel="stylesheet")
-  body
+    block extra_var
+  body(class=bodyClass)
     include ../includes/main-nav
     block content
     include ../includes/footer
